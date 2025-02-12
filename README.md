@@ -29,6 +29,8 @@ Clone the repository and navigate to the project folder:
 git clone https://github.com/yourusername/currency-rates-api.git
 cd currency-rates-api
 composer install
+```
+
 
 ### 2. Create and Configure .env File
 
@@ -49,22 +51,30 @@ DB_USERNAME=your_database_user
 DB_PASSWORD=your_database_password
 
 JWT_SECRET=your_jwt_secret
+```
 
 - Generate a JWT secret by running the following command:
 
+```bash
 php artisan jwt:secret
+```
 
 ### 3. Run Migrations
 
+```bash
 php artisan migrate
+```
 
 ### 4. Start the API
 
+```bash
 php artisan serve
+```
 
 ## API Usage
 
 ### 1. User Registration
+```bash
 - Endpoint: 
             POST /api/register
 
@@ -88,9 +98,10 @@ php artisan serve
         "email": ["This email is already registered."]
     }
 }
+```
 
 ### 2. User Login
-
+```bash
 - Endpoint: 
             POST /api/login
 
@@ -110,9 +121,10 @@ php artisan serve
 {
     "message": "Invalid credentials."
 }
+```
 
 ### 3. Get Currency Rates
-
+```bash
 - Endpoint: 
             GET /api/currency-rates
 
@@ -139,3 +151,4 @@ Parameters:
     "message": "CBAR connection failed.",
     "error": 500
 }
+```
