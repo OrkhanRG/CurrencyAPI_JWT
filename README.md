@@ -172,8 +172,8 @@ php artisan serve
 
 ## Images:
 
-![Logo](/images/logo1.png)
+![Logo](public/images/logo2.png)
 
-![Logo](/images/logo2.png)
+![Logo](public/images/logo3.png)
 
-![Logo](/images/logo3.png)
+![Logo](public/images/logo1.png)
