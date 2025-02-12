@@ -74,24 +74,31 @@ php artisan serve
 ## API Usage
 
 ### 1. User Registration
-```bash
 - Endpoint: 
+
+```bash
             POST /api/register
+```
 
 - Parameters:
 
+```bash
     name: User name (string, required)
     email: Email address (string, required, unique)
     password: Password (string, required, minimum 8 characters)
+```
 
 - Successful Response:
 
+```bash
 {
     "token": "your_jwt_token"
 }
+```
 
 - Error Response:
 
+```bash
 {
     "message": "Invalid format of input parameters!",
     "errors": {
@@ -101,41 +108,47 @@ php artisan serve
 ```
 
 ### 2. User Login
-```bash
 - Endpoint: 
+
+```bash
             POST /api/login
+```
 
 - Parameters:
 
+```bash
+
     email: Email address (string, required)
     password: Password (string, required)
+```
 
 - Successful Response:
-
+```bash
 {
     "token": "your_jwt_token"
 }
-
+```
 - Error Response:
-
+```bash
 {
     "message": "Invalid credentials."
 }
 ```
 
 ### 3. Get Currency Rates
-```bash
 - Endpoint: 
+```bash
             GET /api/currency-rates
+```
 
-Parameters:
-
+- Parameters:
+```bash
             date: Date in the format YYYY-MM-DD (optional, default is today's date)
-
+```
 - Authentication: Requires a valid JWT token in the Authorization header.
 
 - Successful Response:
-
+```bash
 {
     "date": "2025-02-05",
     "rates": {
@@ -144,9 +157,10 @@ Parameters:
         "GBP": "2.15"
     }
 }
+```
 
 - Error Response:
-
+```bash
 {
     "message": "CBAR connection failed.",
     "error": 500
