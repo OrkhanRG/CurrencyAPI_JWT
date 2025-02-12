@@ -1,0 +1,145 @@
+{
+	"info": {
+		"_postman_id": "1a9e63af-c066-4ab2-8b34-33490ec5210e",
+		"name": "Currency Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34822150"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "orxanismayilov851@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "OrxanRG!14",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Orxan Ismayilov",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "orxanismayilov851@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "asdQWE!123",
+									"type": "text"
+								},
+								{
+									"key": "password_confirm",
+									"value": "asdQWE!123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/register",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Currency",
+			"item": [
+				{
+					"name": "Rates",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzM5Mzk1MDQ5LCJleHAiOjE3MzkzOTg2NDksIm5iZiI6MTczOTM5NTA0OSwianRpIjoiT3A1aUR2RHQ2MDIxQXpRdSIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.zf_Y0hVOt0JP6OMz_HZbzq1SJcEsNPnrCMTknbfp9Z4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/currency-rates?date=2025-02-13",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"currency-rates"
+							],
+							"query": [
+								{
+									"key": "date",
+									"value": "2025-02-13"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

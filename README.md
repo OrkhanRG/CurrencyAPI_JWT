@@ -166,3 +166,6 @@ php artisan serve
     "error": 500
 }
 ```
+
+## Note:
+### All endpoints are in the postman export in the public/postman_collections folder
