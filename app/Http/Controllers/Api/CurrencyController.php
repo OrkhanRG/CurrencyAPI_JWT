@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\Api;
 
 use Exception;
-use Illuminate\Http\Request;
 use App\Services\CurrencyService;
 use Illuminate\Http\JsonResponse;
 use App\Http\Controllers\Controller;

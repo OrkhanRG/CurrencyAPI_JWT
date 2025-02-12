@@ -24,15 +24,14 @@ class CurrencyRequest extends FormRequest
     public function rules():array
     {
         return [
-            'date' => 'nullable|date|date_format:Y-m-d',
+            'date' => 'nullable|date_format:d.m.Y',
         ];
     }
 
     public function messages(): array
     {
         return [
-            'date.date' => 'Daxil etdiyiniz tarix düzgün deyil',
-            'date.date_format' => 'Tarix formatı YYYY-MM-DD şəklində olmalıdır!',
+            'date.date_format' => 'Tarix formatı DD.MM-YYYY şəklində olmalıdır!',
         ];
     }
 

@@ -169,3 +169,11 @@ php artisan serve
 
 ## Note:
 ### All endpoints are in the postman export in the public/postman_collections folder
+
+## Images:
+
+![Logo](/images/logo1.png)
+
+![Logo](/images/logo2.png)
+
+![Logo](/images/logo3.png)

@@ -10,7 +10,6 @@ class CurrencyService implements CurrencyServiceInterface {
     public function getCurrencyRates(string $date): array
 {
     $cacheKey = "currency_rates_$date";
-    $date .= ".xml";
 
     $cachedRates = cache()->get($cacheKey);
     if ($cachedRates) {
@@ -24,12 +23,11 @@ class CurrencyService implements CurrencyServiceInterface {
     }
 
     $xml  = simplexml_load_string($response->body());
-    dd($xml);
 
     $data = json_decode(json_encode($xml), true);
 
     $rates = [];
-    foreach ($data['Valute'] as $valute) {
+    foreach ($data["ValType"][1]['Valute'] as $valute) {
         $rates[$valute['@attributes']['Code']] = $valute['Value'];
     }
 
